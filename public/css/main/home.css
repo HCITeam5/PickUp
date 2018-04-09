@@ -1,0 +1,187 @@
+@import url("hover.css");
+
+:root {
+    --main-colour: #E94348;
+    --grey-colour: #363636;
+}
+
+body {
+    padding-top: 80px;
+}
+
+h2 {
+    color: var(--main-colour);
+    /*border-bottom: 5px solid;*/
+    padding-bottom: 20px;
+}
+
+h2 > hr {
+    border: 2px solid;
+    width: 10%;
+    margin-left: 0;
+}
+
+.main-colour {
+    color: var(--main-colour);
+}
+
+footer {
+    background-color: var(--main-colour);
+    padding: 25px;
+    margin: 0 !important;
+}
+
+footer>img {
+    width: 20%;
+}
+
+footer>p {
+    margin: 0;
+}
+
+.btn-default {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.login {
+    color: white;
+    background-color: var(--grey-colour);
+}
+
+.row {
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.align-top {
+    align-items: normal;
+}
+
+.white {
+    background-color: : white;
+}
+
+.white-text {
+    color: white;
+}
+
+.main-row {
+    height: 90vh;
+}
+
+.dark {
+    background-color: #363636;
+}
+
+.grey {
+    background-color: #ebebeb;
+}
+
+.phone>img {
+    height: 400px;
+}
+
+.wireframe {
+    width: 100%;
+}
+
+.phone {
+    text-align: center;
+}
+
+.white-text {
+    color: white;
+}
+
+.team {
+    text-align: center;
+}
+
+.align-baseline {
+          align-items: baseline;
+}
+
+.team-img {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+}
+
+.accordion-title {
+    text-align: center;
+    colour: var(--main-colour);
+}
+
+.form-row>.pad-left {
+    padding-left: 0px;
+}
+
+.form-row>.pad-right {
+    padding-right: 0px;
+}
+
+.fa-2x {
+    margin-right: 10px;
+}
+
+.fa-2x:hover {
+    color: lightgrey;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--main-colour);
+    color: white;
+    transition: background-color 300ms;
+}
+
+.display-none {
+    display: none;
+    transition: background-color 300ms;
+}
+
+.form-control {
+    border-color: lightgrey;
+    border-radius: 4px;
+    height: 50px;
+}
+
+
+.full-screen {
+    height: 80vh;
+}
+
+
+@media (max-width: 767px) {
+    .phone>img,
+    .wireframe {
+        display: none;
+    }
+    .row {
+        padding: 40px !important;
+        text-align: center;
+        display: block;
+        height: 100%;
+    }
+    .full-screen {
+    height: 100vh;
+}
+    h2 > hr {
+    width: 10%;
+    margin-left: auto;
+}
+}
+
+@media (max-width: 1170px) {
+    .form-row>.pad-left,
+    .form-row>.pad-right {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

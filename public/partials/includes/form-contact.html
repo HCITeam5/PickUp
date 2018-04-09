@@ -1,0 +1,24 @@
+<form data-toggle="validator" class="contact-form">
+
+    <div class="form-row">
+        <div class="form-group col-md-6 pad-left mb-2">
+            <input type="text" class="form-control" placeholder="First Name.." required>
+            <div class="help-block with-errors"></div>
+        </div>
+        <div class="form-group col-md-6 pad-right">
+            <input type="email" class="form-control" placeholder="Enter Email.." required>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="subject" placeholder="Subject.." required>
+    </div>
+    <div class="form-group">
+        <textarea type="text" class="form-control" name="subject" placeholder="Message.." rows="5" required></textarea>
+        <div class="help-block with-errors"></div>
+    </div>
+    <button class="btn btn-default submit" type="submit" id="submit" onclick="success()">SUBMIT </button>
+    <button class="btn btn-default login" type="reset">RESET</button>
+            <div id="success"></div>
+</form>
+<br><br>

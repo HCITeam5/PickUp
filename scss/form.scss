@@ -1,0 +1,18 @@
+form {
+
+    >input[type="text"],
+    >input[type="email"],
+    >input[type="password"] {
+
+        // show success!
+        &:valid {
+            background: url(images/check.svg);
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 20px 20px; // continue to hide the label
+            &+label {
+                opacity: 0;
+            }
+        }
+    }
+}

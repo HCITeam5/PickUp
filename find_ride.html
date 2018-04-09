@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Find A Ride | PickUp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/css/bootstrapvalidator.min.css"></link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main/home.css"></link>
+    <link rel="stylesheet" href="css/main/nav.css"></link>
+    <link rel="stylesheet" href="css/main/register.css"></link>
+    <link rel="stylesheet" href="css/main/dash.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#rideBtn").click(function() {
+            $(".ride-main").slideToggle( 500, function() {
+    // Animation complete.
+  });
+        });
+    });
+    </script>
+</head>
+
+<body ng-app="myApp" id="top" class="parallax">
+    <div ng-include="'partials/includes/header-dashboard.html'"></div>
+    <div class="row align-top full-screen" style="height:auto;">
+        <div class="container main-cont main-dashboard">
+            <h2 class="main-colour">Request A Ride<hr></h2>
+            <div class=" dash-row">
+                <form data-toggle="validator">
+                    <div class="form-row">
+                        <div class="form-group col-md-7 pad-left">
+                            <input type="text" class="form-control" placeholder="Enter Address.." required>
+                        </div>
+                        <div class="form-group col-md-3 pad-right">
+                            <input type="date" class="form-control" placeholder="Date(DD/MM).." required>
+                        </div>
+                        <div class="form-group col-md-2 pad-right">
+                            <button style="height:50px;" class="btn btn-default register-btn" type="submit" id="rideBtn">SEARCH</button>
+                        </div>
+                    </div>
+                </form>
+                <br>
+                <br>
+                <div ng-controller="ride" class="ride-main">
+                    <div ng-repeat="ride in rides" class="col-sm-3 ride" ">
+                        <img src="{{ride.img}} ">
+                        <div style="text-align:center; ">
+                    <div class="ride-name ">{{ride.name}}</div>
+                    <div class="ride-name price ">{{ride.price}}</div><br>
+                    <a href="message.html">
+                    <button class="btn btn-default" >CONTACT</button></a>
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div ng-include=" 'partials/includes/footer.html' "></div>
+    <!-- Javascript -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script type="text/javascript " src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
+    <script type="text/javascript " src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js "></script>
+    <script type="text/javascript " src="https://code.angularjs.org/1.5.5/angular-resource.min.js "></script>
+    <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js "></script>
+    <script type="text/javascript " src="js/test.js "></script>
+    <script type="text/javascript " src="js/validation.js "></script>
+    <script type="text/javascript " src="js/ride.js "></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js " integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ " crossorigin="anonymous "></script>
+    <script src="js/scroll-nav.js "></script>
+    <script src="js/smooth-scroll.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js "></script>
+    <script>
+    var scroll = new SmoothScroll('a[href*="# "]');
+    </script>
+</body>
+
+</html>

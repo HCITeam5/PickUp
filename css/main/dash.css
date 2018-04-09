@@ -1,0 +1,144 @@
+.main-dashboard {
+    width: 80%;
+}
+
+.container-box {
+    display: grid;
+    grid-template: "a b";
+    grid-column-gap: 10%;
+    /*padding-top: 50%;*/
+    align-content: center;
+    /*height: 100%;*/
+}
+
+.box {
+    background-color: var(--main-colour);
+    padding: 20px;
+    text-align: center;
+    /*vertical-align: middle;*/
+    color: white;
+    align-self: center;
+    align-items: center;
+}
+
+.dash-row {
+    padding: 10px;
+}
+
+.ride-main {
+    margin-top: 70px;
+    display: inline-flex;
+    display: none;
+}
+
+.ride {
+    background-color: var(--main-colour);
+    margin: 12px;
+    margin-top: 60px;
+    width: 167px;
+}
+
+.ride-main>div>img {
+    width: 100%;
+    position: inherit;
+    top: -40px;
+}
+
+.ride-name {
+    color: white;
+    text-align: center;
+    position: inherit;
+    top: -20px;
+    font-size: 12pt;
+}
+
+.price {
+    font-size: 25pt;
+    font-weight: 500;
+}
+
+.ride> div > a>  .btn {
+    margin-right: 0px;
+    margin-bottom: 20px;
+}
+
+.chat {
+    border: 2px solid var(--main-colour);
+    background-color: white;
+    border-radius: 0px 20px 20px 20px;
+    padding: 20px;
+    margin: 10px 0;
+margin-bottom: 30px;
+    color: var(--main-colour);
+}
+
+.darker {
+    background-color: var(--main-colour);
+        border-radius: 20px 20px 0px 20px;
+            color: white;
+}
+
+.chat::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.chat img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.chat img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+.time-left {
+    float: left;
+    color: #999;
+}
+
+.darker > p {
+    text-align: right;
+}
+
+input:valid {
+    border-color: lightgrey;
+}
+
+.accept {
+    background-color: #6dd26d;
+}
+.decline {
+    background-color: red;
+}
+
+@media (max-width: 767px) {
+    .container-box {
+        display: block;
+    }
+    .box {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    .main-dashboard {
+        width: 100%;
+    }
+    .ride-main {
+        display: block;
+    }
+    .ride {
+        width: auto;
+    }
+}

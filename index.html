@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Home | PickUp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/css/bootstrapvalidator.min.css"></link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main/home.css"></link>
+    <link rel="stylesheet" href="css/main/nav.css"></link>
+    <link rel="stylesheet" href="css/main/register.css"></link>
+        <link rel="stylesheet" href="css/main/form.css"></link>
+</head>
+
+<body ng-app="myApp" id="top">
+    <div ng-include="'partials/includes/header-home.html'"></div>
+    <div class="row dark main-row">
+        <div class="col-sm-6 phone"><img src="img/phone.png" alt=""></div>
+        <div class="col-sm-5 white-text">
+            <h1>Pick Up</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
+            <a href="register.html">
+                <button type="button" class="btn btn-default">Register</button>
+            </a>
+            <a href="login.html">
+                <button type="button" class="btn btn-default login">Login</button>
+            </a>
+        </div>
+    </div>
+    <div id="about" class="row white">
+        <div class="col-sm-8" ng-controller="about">
+            <h2>About</h2>
+            <br>
+            <p> {{ about[0].about }}</p>
+        </div>
+        <div class="col-sm-4"><img class="wireframe" src="img/wire-frame.png"></div>
+    </div>
+    <div class="row grey" id="faq" ng-controller="accordion">
+        <div class="col-sm-12">
+            <h2>FAQ</h2>
+            <br>
+        </div>
+        <div class="col-sm-12">
+            <div class="panel-group" id="accordion" role="tablist">
+                <div class="panel panel-default" ng-repeat="accordion in accordions">
+                    <div class="panel-heading" data-toggle="collapse" role="tab" ng-href="#{{ accordion.href }}">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+{{ accordion.title }}
+                            </a>
+                            <!-- <a  class="acoordion-title" > -->
+
+                            <!-- {{ accordion.title }}</a> -->
+                            </h4>
+                    </div>
+                    <div id="{{accordion.id}}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>{{ accordion.info }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="team" class="row white align-baseline" ng-controller="team">
+        <div class="col-sm-12">
+            <h2>Team</h2>
+            <br>
+        </div>
+        <div class="col-sm-2 team main-colour" ng-repeat="team in teams">
+            <img class="team-img" ng-src="{{team.img}}">
+            <h4> {{ team.name }}</h4>
+            <h5> {{ team.title }}</h5>
+        </div>
+    </div>
+    <div id="contact" class="row dark align-top">
+        <div class="col-sm-12 ">
+            <h2 class="white-text">Contact</h2>
+            <br>
+        </div>
+        <div class="col-sm-6 white-text">
+            <h4>LEAVE A MESSAGE</h4>
+            <br>
+            <div ng-include="'partials/includes/form-contact.html'"></div>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4 white-text">
+            <h4>INFORMATION</h4>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
+            <br>
+            <div class="row-fluid">
+                <i class="fab fa-facebook-square fa-2x"></i>
+                <i class="fab fa-twitter-square fa-2x"></i>
+                <i class="fab fa-youtube-square fa-2x"></i>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div ng-include="'partials/includes/footer.html'"></div>
+    <!-- Javascript -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.5.5/angular-resource.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
+    <script type="text/javascript" src="js/test.js"></script>
+    <script type="text/javascript" src="js/validation.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/scroll-nav.js"></script>
+    <script type="text/javascript" src="js/smooth-scroll.js"></script>
+    <script type="text/javascript" src="js/success.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+    <script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<form data-toggle="validator" >
+    <label class="col-2 col-form-label main-colour" style="font-weight:  400;padding-bottom:  5px; letter-spacing: 3px; ">DROPOFF LOCAION</label>
+    <div class="form-row">
+        <div class="form-group col-md-9 pad-left mb-2">
+            <input type="text" class="form-control" placeholder="Location.." required>
+        </div>
+        <div class="form-group col-md-3 pad-right">
+            <input type="date" class="form-control" placeholder="Date(DD/MM).." required>
+        </div>
+    </div>
+    <label class="col-2 col-form-label main-colour" style="font-weight:  400; padding-bottom:  5px;letter-spacing: 3px;    padding-top: 15px;">PICK UP LOCATION</label>
+    <div class="form-row">
+        <div class="form-group col-md-9 pad-left mb-2">
+            <input type="text" class="form-control" placeholder="Location.." required>
+        </div>
+        <div class="form-group col-md-3 pad-right">
+            <input type="date" class="form-control" placeholder="Date(DD/MM).." required>
+        </div>
+    </div>
+    <label class="col-2 col-form-label main-colour" style="font-weight:  400; padding-bottom:  5px;letter-spacing: 3px;    padding-top: 15px;">VEHICLE INFORMATION</label>
+    <div class="form-row">
+        <div class="form-group col-md-6 pad-left ">
+            <input type="text" class="form-control" placeholder="Make.." required>
+        </div>
+        <div class="form-group col-md-6  pad-right">
+            <input type="text" class="form-control" placeholder="Model.." required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3 pad-left ">
+            <input type="text" class="form-control" placeholder="License Plate.." required>
+        </div>
+        <div class="form-group col-md-3 pad-left ">
+            <input type="text" class="form-control" placeholder="Colour.." required>
+        </div>
+        <div class="form-group col-md-3 pad-left  ">
+            <input type="number" class="form-control" limit="5" placeholder="Year.." required>
+        </div>
+        <div class="form-group col-md-3 pad-right ">
+            <input type="number" class="form-control" placeholder="# of seats.." required>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-4"></div>
+        <div class="form-group col-md-4">
+                        <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input type="number" class="form-control" placeholder="Price.." required>
+        </div>
+        </div>
+        <div class="form-group col-md-4 "></div>
+    </div>
+<br>
+    <div class="form-row">
+        <div class="form-group col-md-12 ">
+            <br>
+            <button class="btn btn-default register-btn" type="submit" id="submit" onclick="success()">CREATE RIDE</button>
+        </div>
+    </div>
+
+</form>
